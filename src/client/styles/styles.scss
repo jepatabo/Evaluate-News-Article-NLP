@@ -1,3 +1,4 @@
+/*variables*/
 $primary-color: #333;
 $secondary-color: #666;
 $third-color: #999;
@@ -5,6 +6,7 @@ $error: #f00;
 $hover: #000;
 $button-text: #fff;
 
+/*nesting*/
 body {
   font-family: Arial, sans-serif;
   background-image: url("../img/bg.jpg");

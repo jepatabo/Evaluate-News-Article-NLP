@@ -19,7 +19,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.render("index.html");
 });
-
+// post async function
 app.post("/", async (req, res) => {
   const url = req.body.input;
   const Analyze = await analyze(url, key);
@@ -29,5 +29,5 @@ app.post("/", async (req, res) => {
   }
   return res.send({ sample: sample, code: code });
 });
-
+// server listen to port 8000
 app.listen(8000, () => console.log(`server is listening on port ${port}`));

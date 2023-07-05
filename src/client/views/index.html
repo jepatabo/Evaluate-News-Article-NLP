@@ -9,6 +9,7 @@
     <main>
       <div class="container">
         <h1>Enter a URL of an Article</h1>
+        <!--Form-->
         <section>
           <form id="form" onsubmit="return Client.handleSubmit(event)">
             <label for="name">Uniform Resource Locator (URL)</label>
@@ -16,10 +17,11 @@
             <button type="submit" class="btn-submit">Submit</button>
           </form>
         </section>
-
+        <!--Error message-->
         <section>
           <p id="error"></p>
         </section>
+        <!--output of results-->
         <section id="results">
           <h2>Form Results:</h2>
           <div id="agreement"></div>
