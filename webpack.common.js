@@ -2,8 +2,9 @@ const webpack = require("webpack"),
   path = require("path");
 HtmlWebpackPlugin = require("html-webpack-plugin");
 ({ CleanWebpackPlugin } = require("clean-webpack-plugin"));
-//CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 ({ merge } = require("webpack-merge"));
+//workbox plugin SW
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -37,6 +38,12 @@ module.exports = {
       // Automatically remove all unused webpack assets on rebuild
       cleanStaleWebpackAssets: true,
       protectWebpackAssets: false,
+    }),
+    // new instance
+    new WorkboxPlugin.GenerateSW({
+      swDest: "service-worker.js", // Specify a custom service worker file name
+      clientsClaim: true,
+      skipWaiting: true,
     }),
   ],
 };
