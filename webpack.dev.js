@@ -1,5 +1,6 @@
 const webpack = require("webpack"),
   path = require("path");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 common = require("./webpack.common");
 ({ merge } = require("webpack-merge"));
 
@@ -15,5 +16,5 @@ module.exports = merge(common, {
       },
     ],
   },
-  plugins: [],
+  plugins: [new WorkboxPlugin.GenerateSW()],
 });
