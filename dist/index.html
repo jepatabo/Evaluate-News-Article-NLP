@@ -1,49 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <title>Sentiment Analyzer</title>
-  <script defer src="bundle.js"></script></head>
-
-  <body>
-    <main>
-      <div class="container">
-        <h1>Enter a URL of an Article</h1>
-        <section>
-          <form id="form" onsubmit="return Client.handleSubmit(event)">
-            <label for="name">Uniform Resource Locator (URL)</label>
-            <input
-              id="name"
-              type="text"
-              name="input"
-              value=""
-              placeholder="Enter Article URL here"
-            />
-            <button type="submit" class="btn-submit">Submit</button>
-          </form>
-        </section>
-
-        <section>
-          <p id="error"></p>
-        </section>
-        <section id="results">
-          <h2>Form Results:</h2>
-          <div id="agreement">Hello</div>
-          <div id="subjectivity">Hello</div>
-          <div id="confidence">Hello</div>
-          <div id="irony">Hello</div>
-          <div id="score_tag" style="font-weight: normal">Hello</div>
-        </section>
-      </div>
-    </main>
-    <script>
-      // Check that service workers are supported
+<!doctype html><html lang="en" dir="ltr"><head><meta charset="utf-8"/><title>Sentiment Analyzer</title><script defer="defer" src="bundle.1102d09ae03ab88a7b20.js"></script><link href="style.8979285b6c1e4aa4d773.css" rel="stylesheet"></head><body><main><div class="container"><h1>Enter a URL of an Article</h1><section><form id="form" onsubmit="return Client.handleSubmit(event)"><label for="name">Uniform Resource Locator (URL)</label> <input id="name" name="input" value="" placeholder="Enter Article URL here"/> <button type="submit" class="btn-submit">Submit</button></form></section><section><p id="error"></p></section><section id="results"><h2>Form Results:</h2><div id="agreement"></div><div id="subjectivity"></div><div id="confidence"></div><div id="irony"></div><div id="score_tag" style="font-weight: normal"></div></section></div></main><script>// Check that service workers are supported
       // if ('serviceWorker' in navigator) {
       //   // Use the window load event to keep the page load performant
       //   window.addEventListener('load', () => {
       //     navigator.serviceWorker.register('/service-worker.js')
       //   })
-      // }
-    </script>
-  </body>
-</html>
+      // }</script></body></html>
